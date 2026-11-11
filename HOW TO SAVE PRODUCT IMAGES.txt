@@ -1,0 +1,201 @@
+================================================================================
+HOW TO SAVE PRODUCT IMAGES
+================================================================================
+
+You never touch the code to add a picture. The bot looks for a file named
+after the thing it belongs to, and uses it if it finds one. Get the name
+right and the picture appears; get it wrong and that screen just shows as
+plain text, and everything else still works.
+
+Written against the shop as it stands on the date this was saved: 14 real
+products across 7 top-level categories, none of them with a picture yet.
+The full list is in section 5.
+
+--------------------------------------------------------------------------------
+1. THE ONE RULE
+--------------------------------------------------------------------------------
+
+   The file is named after the product's CODE, not its name on screen.
+
+   Product on screen                    File to save
+   -----------------------------------  ----------------------------
+   SHARD KETAMINE                       ds_shard_ketamine.jpg
+   8 Ball 250mg 🇳🇱                      ec_8ball_250.jpg
+   Afghani Black Glass 🇦🇫               op_afghan_black.jpg
+   PURE Columbian Cocaine 🇨🇴            st_pure_colombian.jpg
+
+   The codes are listed in section 5. They are lower case, use underscores
+   instead of spaces, and never carry the emoji or flags the on-screen name
+   has.
+
+--------------------------------------------------------------------------------
+2. WHERE THEY GO
+--------------------------------------------------------------------------------
+
+   c:\Users\lb kalous\Desktop\mcwhite\images\
+
+   Straight into that one folder. Not into a sub-folder inside it - the bot
+   does not look inside sub-folders.
+
+--------------------------------------------------------------------------------
+3. WHAT KIND OF FILE
+--------------------------------------------------------------------------------
+
+   Allowed:      .jpg   .jpeg   .png   .webp
+
+   NOT allowed:  .heic (what an iPhone saves by default), .mp4 and video of
+                 any kind, .gif, .bmp, .avif, .tif. Convert to .jpg first or
+                 the bot never finds it.
+
+   Size:         keep it under about 5 MB. Telegram refuses bigger ones.
+   Quality:      1280 pixels wide is plenty.
+
+   If a product somehow has two allowed extensions at once, the bot takes
+   .jpg first, then .jpeg, then .png, then .webp.
+
+--------------------------------------------------------------------------------
+4. STEP BY STEP
+--------------------------------------------------------------------------------
+
+   1. Find the product's code in section 5.
+   2. Rename your picture to that code plus .jpg
+      e.g. IMG_4417.jpg  ->  ds_shard_ketamine.jpg
+   3. Drop it in the images folder from section 2.
+   4. Stop the bot and start it again.
+   5. Open that product in Telegram. The picture is there.
+
+   Step 4 is not optional. The bot remembers a picture's Telegram file ID
+   once it has sent it, so a file added while the bot is already running may
+   not show up until it restarts.
+
+--------------------------------------------------------------------------------
+5. THE 14 PRODUCTS THE BOT IS WAITING FOR
+--------------------------------------------------------------------------------
+
+   None of these have a picture yet. Grouped the way they are filed; a
+   product sold in more than one place (Private re-lists several of these)
+   is still only ONE file - save it once under its one code, not once per
+   place it is sold.
+
+   CANNABIS -> UK GROWN
+       uk_special_queen.jpg          Special Queen 👑✨
+       uk_cereal_milk.jpg            Cereal Milk 🥣🥛
+       uk_strawberry_cheesecake.jpg  Strawberry Cheesecake 🍓🧀  (also in Private)
+
+   CANNABIS -> HASH
+       hash_cali_plates.jpg          🧨 Cali Plates Static Sift – Chocolato
+
+   DISSOCIATIVES -> KETAMINE
+       ds_shard_ketamine.jpg         SHARD KETAMINE
+       ds_rock_ketamine.jpg          ROCK KETAMINE
+
+   ECSTASY -> MDMA
+       ec_8ball_250.jpg              8 Ball 250mg 🇳🇱
+       ec_dutch_mdma.jpg             Dutch MDMA 🇳🇱
+
+   OPIATES
+       op_afghan_black.jpg           Afghani Black Glass 🇦🇫   (also in Private)
+       op_pak4_china_white.jpg       Pakistani #4 (China White)  (also in Private)
+
+   STIMULANTS
+       st_pure_colombian.jpg         PURE Columbian Cocaine 🇨🇴  (also in Private)
+       st_ay_stamp.jpg                "A-Y" Stamp Cocaine 🇨🇴     (also in Private)
+
+   STIMULANTS -> METHAMPHETAMINE
+       pv_pak_meth.jpg                Pakistani Meth 🇵🇰          (also in Private)
+
+   🔥 FIRE SALE 🔥
+       fs_bicarb_crack.jpg            Bicarbonate Crack Cocaine 🇨🇴  (also in Private)
+
+   Private itself has no products of its own - every one of its 8 buttons
+   is one of the products already listed above, reached a second way.
+
+--------------------------------------------------------------------------------
+6. CATEGORY AND LISTING SCREENS CAN HAVE A PICTURE TOO
+--------------------------------------------------------------------------------
+
+   Every screen the bot shows while browsing - not just a product's own
+   page - looks for a picture named after ITS code the exact same way. Save
+   images/cat_cannabis.jpg and the Cannabis category screen gets its own
+   picture; save images/listings.jpg and the root "choose a category"
+   screen does.
+
+   THERE IS NO SHARED BANNER OR FALLBACK PICTURE IN THIS BOT. A screen with
+   no file of its own name shows as plain text - it does NOT fall back to
+   the main menu's picture or to any other image. Each one is its own
+   on/off switch.
+
+   The codes worth knowing:
+
+       listings            the root "choose a category" screen
+       cat_cannabis         Cannabis
+       cat_cannabis_uk        UK Grown
+       cat_cannabis_hash      Hash
+       cat_dissoc           Dissociatives
+       cat_dissoc_ketamine    Ketamine
+       cat_ecstasy          Ecstasy
+       cat_ecstasy_mdma       MDMA
+       cat_opiates          Opiates
+       cat_stimulants       Stimulants
+       cat_stim_meth          Methamphetamine
+       cat_fire_sale        🔥 FIRE SALE 🔥
+       cat_private          Private
+
+   The main menu itself (the very first screen after /start) is separate
+   from all of this - it is always images/menu.jpg.
+
+--------------------------------------------------------------------------------
+7. MULTIPLE PHOTOS ON ONE PRODUCT, OR A SECOND IMAGE FOLDER
+--------------------------------------------------------------------------------
+
+   This bot's image lookup is simpler than some others you may have used:
+   one file per code, no "2.jpg, 3.jpg" numbering for extra photos, no
+   per-flavour pictures. If you want a product to flick through several
+   photos, say so and it can be added - it is not there today.
+
+--------------------------------------------------------------------------------
+8. WHEN IT DOESN'T WORK
+--------------------------------------------------------------------------------
+
+   "I saved the file and the picture still isn't there."
+
+   a) THE HIDDEN SECOND EXTENSION. This catches nearly everyone. Windows
+      hides known extensions by default, so a file that looks like
+      "ds_shard_ketamine.jpg" in Explorer can really be
+      "ds_shard_ketamine.jpg.jpg", and the bot will not find it.
+
+      Fix: File Explorer -> View -> Show -> File name extensions (tick it).
+      Now you can see the real name. Rename it so it ends in exactly one
+      .jpg
+
+   b) DID YOU RESTART THE BOT? See section 4, step 4.
+
+   c) WRONG FOLDER. It must be images\ itself, not a sub-folder.
+
+   d) CAPITALS OR SPACES. "DS_Shard_Ketamine.jpg" and "ds shard ketamine.jpg"
+      are different names from the real one. Every code is lower case with
+      underscores, never spaces.
+
+   e) HEIC FROM A PHONE. Looks like a photo, is not one of the four allowed
+      types. Convert to .jpg.
+
+   f) CHECK THE LOG. The bot writes a line when it looks for a picture and
+      fails to upload one - the warning names the exact key it tried.
+
+   "The picture shows above the text instead of behind it, or not at all."
+
+      This bot has no built-in handling for a caption that is too long for
+      a photo (Telegram's limit is 1024 characters under a picture). A
+      product whose description runs long could fail to send its photo at
+      all if this ever comes up - if you notice it on one of the longer
+      product pages, say so.
+
+--------------------------------------------------------------------------------
+9. SHORT VERSION
+--------------------------------------------------------------------------------
+
+   1. Name the file after the product code: ds_shard_ketamine.jpg
+   2. Put it in c:\Users\lb kalous\Desktop\mcwhite\images\
+   3. Restart the bot.
+   4. Nothing showing? Turn on file extensions in Explorer and check it
+      isn't really called ds_shard_ketamine.jpg.jpg

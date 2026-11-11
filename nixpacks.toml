@@ -1,0 +1,8 @@
+[phases.install]
+cmds = ["pip install -r requirements.txt"]
+
+# Without this Railway has to guess how to run the service. A bot is a worker,
+# not a web server: it opens the connection to Telegram itself and never
+# listens on a port, so there is no health check to pass and nothing to bind.
+[start]
+cmd = "python -u main.py"

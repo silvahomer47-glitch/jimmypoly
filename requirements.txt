@@ -1,0 +1,6 @@
+pyTelegramBotAPI
+psycopg2-binary
+qrcode[pil]
+requests
+Pillow
+tzdata

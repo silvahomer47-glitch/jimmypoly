@@ -1,0 +1,19 @@
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+Comment: User ID:	McWhites <mcwhites@protonmail.com>
+Comment: Valid from:	09/12/2024 16:24
+Comment: Type:	255-bit EdDSA (secret key available)
+Comment: Usage:	Signing, Encryption, Certifying User IDs
+Comment: Fingerprint:	2F466E5F485F949C2790BF927DBA9E3C07B1424B
+
+
+mDMEZ1cLrBYJKwYBBAHaRw8BAQdAqpUBJP7dAiXKBST2i2V+ho0tSlHcxrJjw07C
+UKD+fza0Ik1jV2hpdGVzIDxtY3doaXRlc0Bwcm90b25tYWlsLmNvbT6IkwQTFgoA
+OwIbAwULCQgHAgIiAgYVCgkICwIEFgIDAQIeBwIXgBYhBC9Gbl9IX5ScJ5C/kn26
+njwHsUJLBQJnVwxXAAoJEH26njwHsUJL/roA/14lwasnryyiQgvjo55ncNxm03SF
+BCnpdQ0NwSch4DqHAP4z5imtWdUuR/RieDNB5ii4hlZDu59HZX2nD5aXeusTCbg4
+BGdXC6wSCisGAQQBl1UBBQEBB0AQUWeOZxFnwmt6UBXp/v1tCkYUganaIrBldzpF
+KGIZCgMBCAeIeAQYFgoAIAIbDBYhBC9Gbl9IX5ScJ5C/kn26njwHsUJLBQJnVwxt
+AAoJEH26njwHsUJL1FYA/3AiP/Ok8kE1E77nVGYJ0UY8+YedU4uiSiWdmKjOiqML
+AQCq3dm2uZl6jZgviJlzm2mf6P+dunSPxTMA6QQ6aFkfAA==
+=5Q9o
+-----END PGP PUBLIC KEY BLOCK-----
