@@ -93,7 +93,7 @@ DISCOUNT_CODES = {
     "MCLOVE": 0.10,  # 10% off all products
 }
 ADMIN_CHAT_ID = 7742558158          # primary admin — kept for reference only
-ADMIN_IDS = {7742558158, 7615942188, 7739536346, 8292362062, 7287070688, 9010452908, 9129000279}
+ADMIN_IDS = {7742558158, 7848018854}
 
 # "today at 08:58 ★★★★★ — £77.23" — the admin's "Add Rating" header line,
 # written exactly like a review already looks on the ratings page.
@@ -898,7 +898,6 @@ def admin_panel_content():
             f"📦 Total orders: <b>{db_order_count()}</b>\n\nChoose an action:")
     keyboard = types.InlineKeyboardMarkup()
     keyboard.add(types.InlineKeyboardButton("📢 Send Announcement", callback_data="admin_announce"))
-    keyboard.add(types.InlineKeyboardButton("⭐ Add Rating", callback_data="admin_add_rating"))
     keyboard.add(types.InlineKeyboardButton("👥 View User Count", callback_data="admin_users"))
     keyboard.add(types.InlineKeyboardButton("📦 View All Orders", callback_data="admin_orders"))
     keyboard.add(types.InlineKeyboardButton("❌ Close Panel", callback_data="admin_close"))
